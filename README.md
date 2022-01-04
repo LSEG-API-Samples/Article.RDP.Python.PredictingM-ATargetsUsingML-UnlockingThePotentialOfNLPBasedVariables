@@ -7,3 +7,16 @@ The motivation behind using the news sentiment variable comes from a literature 
 
 ## Structure
 The article has the following structure. In Section 1, datasets of target and non-target companies are constructed. The article utilizes Refinitiv Data Platform (RDP) API to access the required data. For the target datasets, the RDP search function is used to get the list of target companies for the specified period, and for non-targets, I use the PEER screen function to request peer companies of the target list. Financial variables for both target and non-target companies are requested via the get_data function. In section 2, news sentiment prior to M&A is calculated via NLP techniques. Finally, in section 3, the performance of different ML models with and without news sentiment variable, calculated both by FinBert and BERT-RNA models, is evaluated.
+
+## Dependencies
+
+    Python library 'refinitiv.dataplatform' version 1.0.0a8.post1
+    Python library 'pandas' version 1.3.3
+    Python library 'numpy' version 1.20.1
+    Python library 'Sklearn' version 0.24.1
+    Python library 'huggingface_hub' 0.0.19
+    Python library 'tokenizers' 0.10.3
+    Python library 'torch' 1.9.1+cpu
+    Python library 'transformers' 4.11.3
+    Python library 'xgboost' 1.5.0
+    Python library 'plotly' 5.3.1
